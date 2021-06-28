@@ -7,7 +7,10 @@ const LandingPage = () => {
     return (
         <>
             <Typography variant="h6">
-                Browse Images Here
+                Welcome to Soul Soothe
+            </Typography>
+            <Typography variant="subtitle1">
+                A resting place for the soul
             </Typography>
         </>
     )

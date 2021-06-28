@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
+import Landing from '../src/components/LandingPage/LandingPage.jsx'
+import BrowseImagesPane from './components/BrowseImages/BrowseImagesPane';
 
 function App() {
   return (
@@ -9,9 +11,7 @@ function App() {
         <>
           <Route exact path='/' component={Landing} />
           <Switch>
-            <Route exact path='/browse' component={SignUp} />
-            <Route exact path='/login' component={Login} />
-            <Route exact path='/poems' component={GuestPoemSearch} />
+            <Route exact path='/browse' component={BrowseImagesPane} />
           </Switch>
         </>
       </Router>
