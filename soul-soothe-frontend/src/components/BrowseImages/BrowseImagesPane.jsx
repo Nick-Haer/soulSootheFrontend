@@ -30,29 +30,30 @@ const BrowseImagesPane = () => {
                 backgroundColor: '#2a2a72', 
                 backgroundImage: 'linear-gradient(315deg, #2a2a72 0%, #009ffd 74%)',
                 paddingBottom: '300px',
+                margin: 0,
                 }}>
                 <Grid container >
-                    <Grid container alignItems="center" justify="flex-end" item xs={2}>
+                    <Grid container alignItems="center" justify="flex-end" item xs={3}>
                         <Tooltip title="Go Back" >
                             <IconButton onClick={() => setCounter(counter === 0 ? picturesArr.length - 1 : counter - 1)}>
                                 <ArrowBackIcon fontSize="large" />
                             </IconButton>
                         </Tooltip>
                     </Grid>
-                    <Grid item xs={8}>
-                    <Paper elevation={3} style={{ paddingTop: '50px', paddingBottom: '50px', marginTop: '50px' }}>
+                    <Grid item xs={6}>
+                    <Paper elevation={3} style={{ paddingTop: '50px', paddingBottom: '50px', marginTop: '50px', height: '700px' }}>
                         {picturesArr.length > 0 && (
                             <>
                             {picturesArr[counter].animated ? (
-                                <video autoPlay style={{maxHeight: '650px'}} src={picturesArr[counter].link} />
+                                <video muted loop autoPlay style={{maxHeight: '650px', maxWidth: '800px'}} src={picturesArr[counter].link} />
                             ) : (
-                                <img style={{maxHeight: '650px'}} src={picturesArr[counter].link} alt="Calming" />
+                                <img style={{maxHeight: '650px', maxWidth: '800px'}} src={picturesArr[counter].link} alt="Calming" />
                             )}
                             </>
                         )}
                     </Paper>
                     </Grid>
-                    <Grid container alignItems="center" justify="flex-start" item xs={2}>
+                    <Grid container alignItems="center" justify="flex-start" item xs={3}>
                         <Tooltip title="Go Forward" >
                             <IconButton onClick={() => setCounter( counter === picturesArr.length - 1 ? 0 : counter + 1)}>
                                 <ArrowForwardIcon fontSize="large" />
