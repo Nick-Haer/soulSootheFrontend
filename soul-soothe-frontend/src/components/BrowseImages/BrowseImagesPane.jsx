@@ -1,8 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import { Typography, Box, Paper, Grid, IconButton, Tooltip } from '@material-ui/core'
+import { Box, Paper, Grid, IconButton, Tooltip } from '@material-ui/core'
 import axios from 'axios';
 
 
@@ -10,9 +9,6 @@ const BrowseImagesPane = () => {
 
     const [picturesArr, setPicturesArr] = useState([]);
     const [counter, setCounter] = useState(0);
-
-    console.log(picturesArr.length > 0 && picturesArr[counter].link, 'pics');
-    console.log(picturesArr, 'pict');
 
 
     useEffect(() => {
